@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
+import Login from './components/auth/Login';
+import { Nav } from './components/nav/nav';
+import Register from './components/auth/Register';
+import CreateWave from './components/waves/CreateWave';
+import Waves from './components/waves/Waves';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App ">
+    <Router>
+    <Nav/> 
+    <Routes>
+    <Route path='/' element={<Login/>}/>
+    <Route path='/register' element={<Register/>}/>
+    <Route path='/create' element={<CreateWave/>}/>
+    <Route path='/waves' element={<Waves/>}/>
+    </Routes>
+    </Router>
+    
     </div>
+    
   );
 }
 
