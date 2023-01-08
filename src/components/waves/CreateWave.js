@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import "./styles.scss"
 
-const CreateWave = () => {
+function CreateWave() {
     const [wave, setWave] = useState({
         title: "",
         description: "",
@@ -10,12 +10,10 @@ const CreateWave = () => {
         creator: "",
         });
         const { title, description, category, date, creator } = wave;
-        const onChange = e => {
-            return setWave({
+        const onChange = e => setWave({
                 ...wave,
                 [e.target.name]: e.target.value
-            });
-        }
+            })
     
 
   return (

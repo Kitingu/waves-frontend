@@ -2,9 +2,9 @@ import React from 'react'
 
 
 
-const Waves = () => {
+function Waves() {
 
-    const Waves =[
+    const waves =[
         {
             id: 1,
             title: "Wave 1",
@@ -27,7 +27,7 @@ const Waves = () => {
     <h1>Waves</h1>
     <div className='waves'>
 
-    {Waves.map(wave => (
+    {waves.map(wave => (
         <div className='wave' key={wave.id}>
         <h3>{wave.title}</h3>
         <p>{wave.description}</p>
